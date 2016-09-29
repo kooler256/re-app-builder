@@ -43,11 +43,6 @@ module.exports = configs.map(function (config) {
 		],
 		module: {
 			preLoaders: [
-				{
-					test: /\.(js|jsx)$/,
-					include: [here('src'), here('apps'), here('examples')],
-					loader: 'eslint'
-				}
 			],
 			loaders: [
 				{
