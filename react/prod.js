@@ -7,7 +7,12 @@ module.exports = new WebpackConfig().extend(path.join(__dirname, './dev')).merge
 	plugins: [
 		new webpack.optimize.UglifyJsPlugin({
 			sourceMap: false
-		})
+		}),
+	 	new webpack.DefinePlugin({
+		    	'process.env': {
+			      'NODE_ENV': JSON.stringify('production')
+    			}
+	       	})
 	]
 });
 
